@@ -1,0 +1,690 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Estilo base para todas as seções de página completa */
+@media (max-height: 700px) {
+  section.fullpage-section {
+      min-height: 700px;
+  }
+}
+
+body {
+  background-color: #DA3368;
+  color: #FFFFFF;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%; /* Espaçamento lateral padronizado */
+  width: 100%;
+}
+
+@media (max-height: 700px) {
+  section.fullpage-section {
+      min-height: 700px;
+  }
+}
+
+/* Header Styles */
+header {
+  background-color: #DA3368;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%; /* Adicionado padding lateral */
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: 80px;
+  margin-right: 2px;
+  position: relative;
+  top: 8px;
+  left: 15px;
+}
+
+.logo-text {
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-download {
+  background-color: #FEA3C0;
+  color: #000000;
+}
+
+.btn-chat {
+  background-color: #FFFFFF;
+  color: #DA3368;
+  border: 2px solid #DA3368;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  display: inline-block; /* Garante que o link tenha comportamento de bloco */
+  }
+
+/* Hero Banner Styles */
+.hero-banner {
+  background-color: #DA3368;
+  min-height: calc(100vh - 80px); /* Subtrai a altura do header */
+  margin-bottom: 0;
+  position: relative;
+  padding: 0 5%; /* Adicionado padding lateral */
+  top: 100px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0; /* Mantém padding vertical */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.features-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 5%; /* Adicionado padding lateral */
+  height: 100vh;
+  position: relative; /* Mantido para posicionar mensagens corretamente */
+  background-color: #DA3368;
+}
+
+.features-text {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto; /* Centraliza o texto */
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900; 
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.message {
+  position: absolute;
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  z-index: 1;
+}
+
+.message-left {
+  border-bottom-left-radius: 0;
+}
+
+.message-right {
+  border-bottom-right-radius: 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #D9D9D9;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Posições específicas dos balões de mensagem */
+.message-1 {
+  top: 25%;
+  left: 5%;
+}
+
+.message-2 {
+  top: 10%;
+  right: 25%;
+}
+
+.message-3 {
+  top: 20%;
+  right: 5%;
+}
+
+.message-4 {
+  bottom: 15%;
+  right: 5%;
+}
+
+.message-5 {
+  bottom: 30%;
+  left: 15%;
+}
+
+.message-6 {
+  bottom: 10%;
+  left: 40%;
+}
+
+.avatar-left {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+}
+
+.avatar-right {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+}
+
+
+.telegram-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+
+.telegram-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: inherit; 
+  z-index: -1; 
+
+}
+
+.telegram-content {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.phone-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.telegram-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.telegram-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  color: #000000;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.telegram-text .highlight {
+  color: #DA3368;
+}
+
+.telegram-text .description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.telegram-text .instruction {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: #000000; /* Corrigido: era #FFFFFF */
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.cta-button {
+  margin-top: 16px;
+}
+
+.btn-trip {
+  display: inline-block;
+  background-color: #DA3368;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn-trip:hover {
+  background-color: #c02859;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .telegram-content {
+      flex-direction: column;
+  }
+  
+  .telegram-text {
+      text-align: center;
+  }
+  
+  .telegram-text h2 {
+      font-size: 28px;
+  }
+}
+
+.carousel-section {
+  background-color: #DA3368;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 5%; /* Adicionado padding lateral */
+  flex-wrap: wrap;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-left {
+  width: 45%;
+  color: #FFFFFF;
+  padding-right: 20px;
+}
+
+.content-left h2 {
+  color: #FFFFFF;
+  font-size: 42px;
+  font-weight: 900; /* Poppins Black */
+  margin-bottom: 20px;
+}
+
+.content-left p {
+  font-size: 18px;
+  font-weight: 400; /* Poppins Regular */
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .carousel-section {
+      padding: 40px 5%;
+  }
+  
+  .page-navigation {
+      right: 10px;
+  }
+  
+  .content-left, .carousel-container {
+      width: 100%;
+      margin-bottom: 40px;
+  }
+}
+
+.carousel-container {
+  width: 45%;
+  position: relative;
+  margin-left: auto;
+}
+
+.carousel-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 30px;
+  color: #000000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  position: relative;
+  width: 380px;
+  min-height: 320px;
+  margin: 0 auto; /* Centraliza o card */
+}
+
+.carousel-card.active {
+  display: block;
+}
+
+.carousel-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.card-title {
+  font-size: 32px;
+  font-weight: 800; /* Poppins ExtraBold */
+  color: #DA3368;
+}
+
+.card-description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.carousel-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.partnership-section {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch; /* Alterado para que as divs preencham toda a altura */
+  background: none; /* Remove o background vermelho */
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  width: 50%;
+  background-color: #FFFFFF; /* Mantém o fundo branco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+}
+
+.ccr-logo {
+  width: 90%;
+  max-width: 500px;
+  /* Adiciona sombra para o efeito de "adesivo" */
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+.content-container {
+  width: 50%;
+  background-color: #FEA3C0;
+  padding: 80px 5%; /* Adicionado padding lateral */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-container h2 {
+  font-size: 36px;
+  font-weight: 900; /* Poppins Black */
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.content-container p {
+  font-size: 18px;
+  font-weight: 400; /* Poppins Regular */
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.content-container .highlight {
+  font-weight: 800; /* Poppins ExtraBold */
+}
+
+.saiba-mais {
+  background-color: #DA3368;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.saiba-mais:hover {
+  background-color: #c72a5b;
+}
+
+/* Responsividade com espaçamentos padrão */
+@media (max-width: 992px) {
+  .content-container h2 {
+      font-size: 30px;
+  }
+      
+  .content-container p {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnership-section {
+      flex-direction: column;
+  }
+      
+  .image-container, .content-container {
+      width: 100%;
+  }
+      
+  .image-container {
+      padding: 60px 30px;
+  }
+      
+  .content-container {
+      padding: 60px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-container {
+      padding: 40px 20px;
+  }
+      
+  .content-container {
+      padding: 40px 20px;
+  }
+      
+  .content-container h2 {
+      font-size: 26px;
+  }
+}
+
+.team-section {
+  background-color: #DA3368;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 0; /* Adicionado padding vertical */
+  color: #FFFFFF;
+}
+
+.team-section .container {
+  padding: 0 5%; /* Adicionado padding lateral */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.team-member {
+  width: calc(33.33% - 20px);
+  margin-bottom: 30px;
+}
+
+.profile-image-container {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-name {
+  font-size: 24px;
+  font-weight: 900; /* Poppins Black */
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.member-role {
+  font-size: 16px;
+  font-weight: 400; /* Poppins Regular */
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.member-institution {
+  font-size: 14px;
+  font-weight: 400; /* Poppins Regular */
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .content-container h2 {
+      font-size: 30px;
+  }
+  
+  .content-container p {
+      font-size: 16px;
+  }
+  
+  .team-member {
+      width: calc(50% - 15px);
+  }
+  
+  .content-left h2 {
+      font-size: 36px;
+  }
+}
